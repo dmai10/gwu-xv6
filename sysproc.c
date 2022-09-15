@@ -85,3 +85,9 @@ sys_uptime(void)
 	release(&tickslock);
 	return xticks;
 }
+
+int
+sys_getheapptr(void)
+{
+	return myproc()->sz;
+}
